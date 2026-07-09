@@ -1,0 +1,14 @@
+digraph {
+	rankdir=LR
+	A [label="Raw Text"]
+	B [label=Cleaning]
+	C [label="TF-IDF"]
+	D [label=Embeddings]
+	E [label=Similarity]
+	F [label=LLM]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+}
