@@ -1,1 +1,95 @@
-# project2-NLP
+# 📰 Fake News Detection using NLP
+
+## About
+
+This project was developed as part of the Ironhack AI Engineering Bootcamp. The objective was to build a Natural Language Processing (NLP) model capable of classifying news articles as **real** or **fake** using their titles and article content.
+
+---
+
+## Dataset
+
+The dataset contains:
+
+- **label** (0 = Fake, 1 = Real)
+- **title**
+- **text**
+- **subject**
+- **date**
+
+For model training, only the **title** and **text** columns were used.
+
+---
+
+## Preprocessing
+
+- Lowercasing
+- URL removal
+- Reuters source prefix removal
+- Punctuation removal
+- Whitespace normalization
+- Combined title and text into a single feature
+
+---
+
+## Feature Extraction
+
+- TF-IDF Vectorizer
+- 25,000 features
+- Unigrams + Bigrams (`ngram_range=(1,2)`)
+
+---
+
+## Models Evaluated
+
+| Model | Test Accuracy |
+|--------------------------|--------------:|
+| Logistic Regression | 97.00% |
+| Multinomial Naive Bayes | 94.42% |
+| **Linear SVM** | **99.11%** |
+
+The final model was a **Linear SVM** using TF-IDF features, achieving **99.11%** test accuracy.
+
+---
+
+## 🚀 Live Demo
+
+Try the deployed application here:
+
+**https://news-reader-mple29ti36ajanhyqrncfd.streamlit.app**
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- TF-IDF
+- Linear SVM
+- Matplotlib
+- Seaborn
+- Streamlit
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/amer-baniodeh/project2-NLP.git
+cd project2-NLP
+
+pip install -r requirements.txt
+```
+
+Run the notebook in **Jupyter Notebook** or **Google Colab**.
+
+---
+
+## 👥 Authors
+
+**Amer Baniodeh**  
+GitHub: https://github.com/amer-baniodeh
+
+**Felipe Martignon**  
+GitHub: https://github.com/Martigol2
